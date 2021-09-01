@@ -29,7 +29,6 @@
     num($nums1);
     function num($nums1){
         $mayor=0;
-        $menor=0;
 
         foreach ($nums1 as $valor){
             if ($mayor < $valor){
