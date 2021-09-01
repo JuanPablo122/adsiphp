@@ -17,16 +17,14 @@
 
     <h1>RESULTADO</h1>
     <?php 
+    $num=0;
     $num=$_POST['num'];
 
     $nums1=array();
     for ($i=0; $i<$num ; $i++) { 
         $nums1[$i]=rand(0,100);
-    }
-    for ($i=0; $i <$num ; $i++) { 
         echo $nums1[$i].',';
     }
-
 
     num($nums1);
     function num($nums1){
