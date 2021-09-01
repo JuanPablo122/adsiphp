@@ -29,19 +29,20 @@
     num($nums1);
     function num($nums1){
         $mayor=0;
-
         foreach ($nums1 as $valor){
             if ($mayor < $valor){
                 $mayor = $valor;
             }
-            elseif ($menor > $valor){
-                $menor = $valor; 
-    
-            }
+            
         }
     echo "<br>"."El numero mayor es".$mayor."<br>";
-    echo "El numero menor es".$menor."<br>";
     }
+    function NumMe($nums1){
+        $menor=min($nums1);
+      return $menor;
+    }
+    echo "El numero menor del array es:".NumMe($nums1);
+    echo'<br>';
      
     function prom($numeros){
         $sum=0;
