@@ -1,7 +1,7 @@
 <?php
 class persona{
-    private $ciudad;
-    private $telefono;
+    private $ciudad='';
+    private $telefono=0;
     
 function __construct($ciudad,$telefono){
    $this->ciudad=$ciudad;
@@ -9,7 +9,7 @@ function __construct($ciudad,$telefono){
 }
 
 function datos(){
-    return 'vive en: '. $ciudad 'y su numero es: '. $telefono;
+    return 'vive en: '. $this->ciudad .' y su numero es: '. $this->telefono;
     }
 }
 
