@@ -1,33 +1,31 @@
 <?php
-include('material.php');
+include ('libro.php');
+include ('revista.php');
+class Biblioteca{
+    private $coleccion;    
 
-class biblioteca1 extends material1 {
-    function __construct($tipoMaterial,$codigo,$autor,$titulo,$editorial){
-        parent::__construct($tipoMaterial,$codigo,$autor,$titulo,$editorial);
-    } 
+    function __construct(){
+        $this->coleccion=array();
+    }
+    
+    function adicionar($material){
+        array_push($this->coleccion,$material);
+    }
 
-   
-  
+    function verMateriales(){
+        for ($i=0; $i <count($this->coleccion) ; $i++) { 
+            echo $this->coleccion[$i]->getAutor();
+        }
+    }
+    
 }
-$ob=new material1("Libro",1010,"Paulo Coelho","El Alquimista","Araca Editores");
-$ob->datos();
 
-echo $ob->info();
+$biblio=new Biblioteca();
+$ob1=new Libro('virtual','ISBN 856-96700-0-9','Gabo','100 años de soledad',1978,'Buen estado','EDITORIAL Planeta','200','20');
 
-class biblioteca2 extends material2 {
-    function __construct($tipoMaterial,$codigo,$autor,$titulo,$cuartil){
-        parent::__construct($tipoMaterial,$codigo,$autor,$titulo,$cuartil);
-    } 
-   
-  
-}
-$ob=new material2("Revista",1020,"Martha Fedor","Journal of Biological Chemistry","Q1");
+$biblio->adicionar($ob);
+$biblio->adicionar($ob1);
 
-$ob->datos1();
-
-echo '<br><br>';
-echo $ob->info1();
-
-
+$biblio->verMateriales();
 
 ?>

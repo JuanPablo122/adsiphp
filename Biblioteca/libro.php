@@ -1,23 +1,49 @@
-<?php
-class libro{
-    private $editorial;
+<?php 
 
-function __construct($editorial){
+include ('material.php');
+
+class Libro extends Material{
+    
+     private $editorial; 
+     private $numeroPaginas;
+     private $numeroCapitulos;
+        
+function __construct($tipoMaterial,$codigo,$autor,$titulo,$status,$editorial,$numeroPaginas,$numeroCapitulos){
+    parent::__construct($tipoMaterial,$codigo,$autor,$titulo,$status);
     $this->editorial=$editorial;
+    $this->numeroPaginas=$numeroPaginas;
+    $this->numeroCapitulos=$numeroCapitulos;
 }
-function datos(){
-    return 'Editorial: '.$this->editorial;
-}
-}
-class revista{
-    private $cuartil;
+    function setEditorial($editorial){        
+        $this->editorial=$editorial;
+    }
+    function setnumeroPaginas($numeroPaginas){
+        $this->numeroPaginas=$numeroPaginas;
+    }
+    function setnumeroCapitulos($numeroCapitulos){
+        $this->numeroCapitulos=$numeroCapitulos;
+    }
+    function getEditorial(){
+        return $this->editorial;
+    }
+    function getnumeroPaginas(){
+        return $this->numeroPaginas;
+    }
+    function getnumeroCapitulos(){
+        return $this->numeroCapitulos;
+    }
 
-function __construct($cuartil){
-    $this->cuartil=$cuartil;
+    function getAutor(){
+        return $this->autor;
+    }
 }
-function datos1(){
-    return 'Cuartil: '.$this->cuartil;
-}
-}
-
+$ob=new Libro('Papel','ISBN 958-96700-0-8','Julio Verne','Viaje al centro de la tierra','Buen estado','EDITORIAL cupido','117','19');
+echo $ob->datos();
+echo '<br>';
+echo 'EDITORIAL: '.$ob->getEditorial();
+echo '<br>';
+echo 'NUMERO DE PAGINAS: '.$ob->getnumeroPaginas();
+echo '<br>';    
+echo 'NUMERO DE CAPITULOS: '.$ob->getnumeroCapitulos();
+echo '<br>';
 ?>
