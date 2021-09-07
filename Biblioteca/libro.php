@@ -1,6 +1,6 @@
 <?php 
 
-include ('material.php');
+include_once ('material.php');
 
 class Libro extends Material{
     

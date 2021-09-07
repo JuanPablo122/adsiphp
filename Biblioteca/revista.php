@@ -1,5 +1,5 @@
 <?php 
-include ('material.php');
+include_once ('material.php');
 class Revista extends Material{
      private $tema; 
      private $fechaPublicacion;
@@ -36,6 +36,9 @@ function __construct($tipoMaterial,$codigo,$autor,$titulo,$status,$tema,$fechaPu
     }
     function getNumeroEdicion(){
         return $this->numeroEdicion;
+    }
+    function getAutor(){
+        return $this->autor;
     }
 }
 $ob=new Revista('Papel estucado','ISSN 0028-0836','Pepe Perez','nature','Buen estado','Cientifico','03-09-2021','EEUU','19');

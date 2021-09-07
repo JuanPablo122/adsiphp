@@ -15,7 +15,7 @@ $this->status=$status;
 }
 
  function datos(){
-     return 'TIPO DE MATERIAL: '.$this->tipoMaterial.'<br>'. 'CODIGO: '.
+     return '<br>'.'TIPO DE MATERIAL: '.$this->tipoMaterial.'<br>'. 'CODIGO: '.
      $this->codigo.'<br>'. 'AUTOR: '.$this->autor.'<br>'. 'TITULO: '.$this->titulo.
      '<br>'. 'STATUS: '.$this->status;
  }
