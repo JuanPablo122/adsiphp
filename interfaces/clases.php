@@ -10,11 +10,11 @@ class Ave extends Animal implements Locomocion{
 
     }
     function movimiento(){
-        echo $this->nombre.'se mueve por su pata'.$this->pata;
+        echo $this->nombre.'Vuela y se mueve por su pata'.$this->pata;
 
     }
     function emitirSonido($sonido){
-        echo $this->nombre.'hace'.$this->sonido;
+        echo $this->nombre.' hace '.$sonido;
 
     }
 }
@@ -28,17 +28,16 @@ class Pez extends Animal implements Locomocion{
 
     }
     function movimiento(){
-        echo 'movimiento caracteristico de los peces de la familia'.$this->familia;
+        echo 'movimiento caracteristico de los peces de la familia '.$this->familia;
 
     }
-    function emitirSonido($sonido){
-
-    }
+    function emitirSonido($sonido){}
 }
-$tiburon= new Pez('Tiburón','Pez','Cartilaginoso');
-$paloma= new Ave('Paloma','Ave','delgado','Anisodactila');
+
+$tiburon= new Pez(' Tiburón ',' Pez ',' Cartilaginoso ',' Oceano ');
+$paloma= new Ave(' Paloma ',' Ave ',' delgado ',' Anisodactila ');
 $tiburon->movimiento();
-$Paloma->movimiento();
+$paloma->movimiento();
 $paloma->emitirSonido('Gorjeo');
 
 ?>

@@ -6,11 +6,11 @@ class Animal{
         $this->nombre=$nombre;
         $this->clase=$clase;
     } 
-    function setter($atributo,$valor){
+    public function setter($atributo,$valor){
         $this->$atributo=$valor;
 
     }
-    function getter($atributo,$valor){
+    public function getter($atributo,$valor){
         return $this->$atributo;
     }
 
