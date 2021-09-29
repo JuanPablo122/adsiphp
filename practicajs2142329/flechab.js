@@ -42,17 +42,19 @@ var vec=(array,tam)=>{
 v=[];
 x=5;
 console.log('flecha: '+vec(v,x));
-console.log('flecha:... '+vec(v,x)[0]);
-console.log('La suma de los numeros pares es: '+ sp());
+//console.log('flecha:... '+vec(v,x)[0]);
 
-var sp=v=>{
+
+var sumPares=v=>{
     let suma=0;
-    for (let i = 0; i < v.length; i++) {
+    for (let i = 0; i< v.length; i++) {
         if (v[i]%2 == 0) {
-            suma += vec[i];
+            suma += v[i];
         }
     }  
-    return suma;
+    return suma; 
 }
+console.log('La suma de los numeros pares es: '+ sumPares(v));
+
 
 
