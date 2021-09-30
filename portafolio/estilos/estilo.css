@@ -41,7 +41,8 @@
     display: none;
 }
 .container-menu{
-    position: absolute;
+    position: fixed;
+    top: 0;left: 0;
     background: rgba(0,0,0,0.5);
     width: 100%;
     height: 100vh;
@@ -91,11 +92,12 @@
 }
 /*Fin de Menù lateral*/
 
+/*Cuerpo de la pagina*/
 .prinseccion{
     background-color: #e0e3e4;
     margin-top:100px;
 }
-img{
+.prinseccion img{
     margin-top:100px;
     margin-left: 450px;
     margin-bottom: -70px;
@@ -106,4 +108,81 @@ img{
     border-width: 10px;
     border-color: #fff;
     
+}
+.cuerpo h1{
+    text-align: center;
+    margin-top: 100px;
+    font-family: 'Source Sans Pro';
+    font-size: 60px;
+}
+.cuerpo p{
+    text-align: center;
+    font-size: 20px;
+}
+.cuerpo h2{
+    font-family: 'Source Sans Pro';
+    font-size: 70px;
+    margin-top: 200px;
+    margin-left: 60px;
+    margin-bottom: -120px;
+}
+.cuerpo #img1{
+    width: 550px;
+    height: 530px;
+    margin-left: 60px;
+}
+.cuerpo #img2{
+    width: 550px;
+    height: 530px;
+    margin-bottom: 180px;
+    margin-left: 40px;
+    display: inline-block;
+}
+.cuerpo-m{
+    background-color: #e0e3e4;
+    margin-top: -255px;
+    height: 37vh;
+    padding-top: 133px;
+}
+.cuerpo-m p{
+    margin-left: 654px;    
+}
+.cuerpo-m button{
+    margin-top: 50px;
+    margin-left: 654px;
+    width: 150px;
+    height: 50px;
+}
+.parrafo{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 50px;
+    line-height: 2.0; 
+}
+.icono{
+    margin-top: 20px;
+    margin-left: 65vh;
+    width: 70px;
+    height: 70px;
+}
+footer{
+    background-image: url(../imagenes/footer.jpg);
+    background-repeat: no-repeat;
+    height: 40vh;
+    background-size: 100% 100%;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
+    margin-top: 60px;
+    padding-top: 100px;
+}
+footer p{
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+.icono2{
+    margin-top: 20px;
+    margin-left: 608px;
+    width: 40px;
+    height: 40px;
+    color: #fff;
 }

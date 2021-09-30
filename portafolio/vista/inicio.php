@@ -34,6 +34,39 @@
     <img src="../imagenes/principal.jpg" alt="Imagen Principal">
 </div>
 
+<section>
+<div class="cuerpo">
+<h1>Juan Pablo Doncel</h1>
+<p>Desarrollador de front-end y back-end con conocimientos<br> básicos
+   en desarrollo de software en la web. Lo que comenzó<br> siendo un trabajo
+   más o menos abarcable, se ha ido convirtiendo<br> con el tiempo en un sector
+   multidisciplinar que precisa necesariamente<br> de la intervención de diferentes
+   lenguajes y especialidades. 
+</p>
+<h2>Diseños</h2>
+<img id="img1" src="../imagenes/delicia1.gif" alt="ImagenDeliciaExpress">
+<img id="img2" src="../imagenes/delicia2.gif" alt="ImagenDeliciaExpress">
+</div>
+
+<div class="cuerpo-m">
+    <p>Imágenes de Delicia Express</p>
+    <a href="##"><button>Ver página</button></a>
+</div>
+
+<p class="parrafo" >Diseñamos experiencias inspiradas en <br> personas que generan 
+   cambios <br> positivos en la vida de las personas.</p>
+<img class="icono" src="../imagenes/flecha.ico" alt="Flecha">
+</section>
+
+<footer>
+<p>¡Queremos estar en contacto contigo! 
+    Síganos en nuestro correo <br> para  
+    que podamos mantenernos en contacto.</p>
+
+<a href="mailto:jpdoncel0@misena.edu.co">
+    <img class="icono2" src="../imagenes/gmail.ico" alt="Gmail">
+</a>
+</footer>
 
 </body>
 </html>
