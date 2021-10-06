@@ -13,7 +13,7 @@ function __construct($IdUsuarios,$NombreUsuarios,$ApellidoUsuarios,$EmailUsuario
     $this->ApellidoUsuarios=$ApellidoUsuarios;
     $this->EmailUsuarios=$EmailUsuarios; 
     $this->ContrasenaUsuarios=$ContrasenaUsuarios;
-    $this->IdRoles=$IdRoles;
+    $this->IdRoles=$IdRoles; 
 }
 
 function getIdUsuarios() {

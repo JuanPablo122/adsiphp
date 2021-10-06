@@ -11,54 +11,41 @@
 </head>
 <body>
 <header>
-	<h1 id="tit">ADMINISTRADOR</h1>
-	<nav>
-		<a class="l1" href="inicioadmin.php">INICIO</a>
-	    <a class="l1" href="adminverusuarios.php">VER USUARIOS</a>
-	</nav>	
 </header>	
-<?php
-include("../modelo/conexion.php");
-
-?>
 <div>
 <h1 id="subt" align="center">Listado de usuarios</h1>
-<table >
-	<tr id="tr1">
-    <td>Id Usuarios</td>
-    <td>Nombres </td>
-    <td>Apellidos</td>
-    <td>Email</td>
-    <td>Contraseña</td>
-    <td>Rol</td>
-    </tr>
+<table class="table">
+            <thead>
+                <tr>
+                    <th>IdUsuarios</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Email</th>
+					<th>Contraseña</th>
+					<th>Rol</th>
+                </tr>
+            </thead>
+            <tbody>			
+			<?php
+			    include('../controlador/controladorlistar.php');
+                foreach ($Usuarios as $key) {
+            ?>
+            <th><?php echo  $key->getIdUsuarios() ?></th>
+			<th><?php echo  $key->getNombreUsuarios() ?></th>
+			<th><?php echo  $key->getApellidoUsuarios() ?></th>
+			<th><?php echo  $key->getEmailUsuarios() ?></th>
+			<th><?php echo  $key->getContrasenaUsuarios() ?></th>
+			<th><?php echo  $key->getIdRoles() ?></th>      
+			<th>		
+				<input type="submit" value="Eliminar" name="delete">
+				<input type="submit" value="Actualizar" name="update">
+			</th>
+			<?php
+			}
+			?>
+            </tbody>
+    </table>
 
-    <?php	
-	$registro=mysqli_query($conn,"select IdUsuarios,NombreUsuario,Apellido,Email,Contrasena,rol from usuarios") or die("Problemas en la consulta: " .mysqli_error($conn));
-	?>
-
-	<?php
-	while($reg=mysqli_fetch_array($registro)){	
-	?>
-
-	<tr>
-		<td><?php echo $reg['IdUsuarios'] ?></td>
-		<td><?php echo $reg['NombreUsuario'] ?></td>
-		<td><?php echo $reg['Apellido'] ?></td>
-		<td><?php echo $reg['Email'] ?></td>
-		<td><?php echo $reg['Contrasena'] ?></td>
-		<td><?php echo $reg['rol'] ?></td>
-	</tr>
-
-	<?php
-    }
-	?>
-
-</table>
 </div>
-<?php
-mysqli_close($conn);
-
-?>
 </body>
 </html>
