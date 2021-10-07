@@ -11,40 +11,46 @@
 </head>
 <body>
 <header>
-</header>	
+</header>
+<a href="registrousuarios.php"><input type="button" value="Registrar" class="boton1"></a>	
 <div>
 <h1 id="subt" align="center">Listado de usuarios</h1>
 <table class="table">
             <thead>
                 <tr>
                     <th>IdUsuarios</th>
-                    <th>Nombre</th>
+                    <th>Nombres</th>
                     <th>Apellidos</th>
                     <th>Email</th>
 					<th>Contraseña</th>
 					<th>Rol</th>
+					<th>Acciones</th>
                 </tr>
             </thead>
-            <tbody>			
+			<tbody>		
 			<?php
 			    include('../controlador/controladorlistar.php');
                 foreach ($Usuarios as $key) {
             ?>
-            <th><?php echo  $key->getIdUsuarios() ?></th>
-			<th><?php echo  $key->getNombreUsuarios() ?></th>
-			<th><?php echo  $key->getApellidoUsuarios() ?></th>
-			<th><?php echo  $key->getEmailUsuarios() ?></th>
-			<th><?php echo  $key->getContrasenaUsuarios() ?></th>
-			<th><?php echo  $key->getIdRoles() ?></th>      
-			<th>		
-				<input type="submit" value="Eliminar" name="delete">
-				<input type="submit" value="Actualizar" name="update">
-			</th>
+			<tr>
+            <td><?php echo  $key->getIdUsuarios() ?></td>
+			<td><?php echo  $key->getNombreUsuarios() ?></td>
+			<td><?php echo  $key->getApellidoUsuarios() ?></td>
+			<td><?php echo  $key->getEmailUsuarios() ?></td>
+			<td><?php echo  $key->getContrasenaUsuarios() ?></td>
+			<td><?php echo  $key->getIdRoles() ?></td>      
+			<td>		
+			<a href="eliminarusuarios.php?IdUsuarios=<?php echo $key->getIdUsuarios();?>"><input type="submit" value="Eliminar" name="delete"></a>
+				<a href="actualizarusuarios.php?IdUsuarios=<?php echo $key->getIdUsuarios();?>"><input type="submit" value="Actualizar" name="update"></a>
+			</td>
+			</tr>
 			<?php
 			}
 			?>
-            </tbody>
+			</tbody> 
+			
     </table>
+
 
 </div>
 </body>

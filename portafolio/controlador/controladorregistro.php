@@ -9,18 +9,20 @@
 </head>
 <body>
 <?php 
-require('../vista/indexinsertar.php');
-require('../dao/DaoAprendizImpl.php');
-$dao=new DaoAprendizImpl();
-if (isset($_GET['boton'])) {
-    $nombre=$_GET['nombre'];
-     $documento=$_GET['doc'];
-     $formacion=$_GET['forma'];
-     $sexo=$_GET['sexo']; 
-     $a=new Aprendiz($nombre,$documento,$formacion,$sexo);
+require('../vista/registrousuarios.php');
+require('../dao/daoUsuariosImpl.php');
+$dao=new DaoUsuariosImpl();
+if (isset($_GET['register'])) {
+    $IdUsuarios=$_GET['idUser'];
+    $NombresUsuarios=$_GET['nombres'];
+    $ApellidoUsuarios=$_GET['apellidos'];
+    $EmailUsuarios=$_GET['email'];
+    $ContrasenaUsuarios=md5($_GET['contrasena']); 
+    $IdRoles=$_GET['idRol'];
+     $a=new Usuarios($IdUsuarios,$NombresUsuarios,$ApellidoUsuarios,$EmailUsuarios,$ContrasenaUsuarios,$IdRoles);
     $dao->registrar($a);
     echo "REGISTRO INSERTADO CON EXITO";    
-}
+} 
            
 ?>    
 </body>

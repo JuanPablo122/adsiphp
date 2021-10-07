@@ -13,7 +13,6 @@
 require('../dao/daoUsuariosImpl.php');
 $dao=new DaoUsuariosImpl();
 $Usuarios=$dao->listar();
-require('../vista/listarusuarios.php');
 ?>    
 </body>
 </html>

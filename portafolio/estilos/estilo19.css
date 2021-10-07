@@ -84,3 +84,14 @@ td{
 	background-color: #fff;
 	padding: 10px;
 }
+th{
+	color: #fff;
+}
+.boton1{
+	margin-top: -90px;
+	margin-left: 1000px;
+	font-family: 'Kalam', cursive;
+	font-size: 16px;
+	width: 150px;
+    height: 50px;
+}

@@ -1,3 +1,13 @@
+<?php
+require '../conexion/conexion2.php';
+$db =new Database();
+$con = $db->conectar();
+
+$id=$_GET['IdUsuarios'];
+$query = $con->prepare("SELECT * FROM usuarios WHERE IdUsuarios = :IdUsuarios");
+$query->execute(['IdUsuarios' => $id]);
+$row = $query->fetch(PDO::FETCH_ASSOC);
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,32 +23,26 @@
 	<!--<a id="r" href="registrorestaurante.php"><button class="r">Restaurantes</button></a>
 	<a id="c" href="registroempleado.php"><button class="r">Soy Empleado</button></a>-->
 <header>
-	<h1 id="tit">REGISTRO CLIENTE</h1>
+	<h1 id="tit">ACTUALIZAR CLIENTE</h1>
 </header>
-
-<form method="GET" action="../controlador/controladorregistro.php"> 
+<form method="get" action="../controlador/controladoractualizar.php">
 	<p>Hola! Nos complace saber que deseas registrarte y empezar a usar nuestros servicios, a continuacion encontraras un formulario, diligencialo correctamente y asi podras empezar a disfrutar.</p>
-	<label>Id Usuarios</label>
-	<input type="text" class="ctexto" id="nombre" name="idUser" ><br><br>
+	<input type="hidden" class="ctexto" id="nombre" name="idUser" value="<?php echo  $row['IdUsuarios']; ?>"><br><br>
 	<label>Nombres completos</label>
-	<input type="text" class="ctexto" id="nombre" name="nombres" ><br><br>
+	<input type="text" class="ctexto" id="nombre" name="nombres" value="<?php echo  $row['NombreUsuarios']; ?>"><br><br>
 	<label>Apellidos completos</label>
-	<input type="text" class="ctexto" id="apellido" name="apellidos" ><br><br>
+	<input type="text" class="ctexto" id="apellido" name="apellidos" value="<?php echo  $row['ApellidoUsuarios']; ?>"><br><br>
 	<label>Correo Electronico</label>
-	<input type="email" class="ctexto" id="correo" name="email"><br><br>	
+	<input type="email" class="ctexto" id="correo" name="email" value="<?php echo  $row['EmailUsuarios']; ?>"><br><br>	
 	<label>Crea tu contraseña</label>
-	<input type="password" class="ctexto" id="contraseña" name="contrasena"><br><br>
+	<input type="password" class="ctexto" id="contraseña" name="contrasena" value="<?php echo  $row['ContrasenaUsuarios']; ?>"><br><br>
 	<label>IdRoles</label>
-	<input type="text" class="ctexto" id="nombre" name="idRol" ><br><br>
-	<input class="b1" type="submit" id="m" name="register">
+	<input type="text" class="ctexto" id="nombre" name="idRol" value="<?php echo  $row['IdRoles']; ?>" ><br><br>
+	<input class="b1" type="submit" id="m"  value="Actualizar">
 	<!--<a href="../vista/iniciosesion.php">Ya te registraste? <u>INICIA SESIÓN</u> </a>-->
 </form>
 	<a id="v" href="listarusuarios.php"><button class="b1"> VOLVER AL LISTADO</button></a>
-	
 <footer>
-	Contactanos <br>
-	Numeros: 3182883910-3002608446-3229564274 <br>
-	Direccion: Carrera 9 Este N 30C-36 San Mateo
 </footer>
 
 </body>
