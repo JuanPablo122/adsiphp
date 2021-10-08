@@ -1,33 +1,3 @@
-<?php 
-require '../conexion/conexion2.php';
-$db = new Database();
-$con = $db->conectar();
-$correcto = false;
-
-if(isset($_POST['IdUsuarios'])){
-     $IdUsuarios=$a->getIdUsuarios(); 
-    $NombreUsuarios=$a->getNombreUsuarios();
-    $ApellidoUsuarios=$a->getApellidoUsuarios();
-    $EmailUsuarios=$a->getEmailUsuarios();
-    $ContrasenaUsuarios=$a->getContrasenaUsuarios();
-    $IdRoles=$a->getIdRoles();
-    $query = $con->prepare("UPDATE usuarios " +
-    "SET IdUsuarios =$IdUsuarios"+
-    "NombreUsuarios =$NombreUsuarios," +
-    "ApellidoUsuarios =$ApellidoUsuarios," +
-   "EmailUsuarios = $EmailUsuarios" +
-   "ContrasenaUsuarios =$ContrasenaUsuarios"+
-   "IdRoles =$IdRoles"+
-    "where IdUsuarios =$IdUsuarios");
-    $resultado =$query->execute(array($NombreUsuarios,$ApellidoUsuarios,$EmailUsuarios,$ContrasenaUsuarios,$IdRoles));
-    $IdUsuarios=$a->getIdUsuarios();        
-    if($resultado){
-        $correcto = true;
-    }
-
-
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,16 +8,22 @@ if(isset($_POST['IdUsuarios'])){
     <title>Document</title>
 </head>
 <body>
-    <?php
-    if($correcto){?>
-    <h3>Registro Guardado</h3>
-    <?php }else{?> 
-    <h3>Error al Guardar</h3>
-    <?php }?>
-
-    
-        
-    
-  
+<?php 
+require('../vista/actualizarusuarios.php');
+require('../dao/daoUsuariosImpl.php');
+$dao=new DaoUsuariosImpl();
+if (isset($_GET['update'])) {
+    $IdUsuarios=$_GET['IdUsuarios'];
+    $NombreUsuarios=$_GET['nombres'];    
+    $ApellidoUsuarios=$_GET['apellidos'];
+    $EmailUsuarios=$_GET['email'];
+    $ContrasenaUsuarios=$_GET['contrasena'];
+    $IdRoles=$_GET['idRol'];
+    $a=new Usuarios($IdUsuarios,$NombreUsuarios,$ApellidoUsuarios,$EmailUsuarios,$ContrasenaUsuarios,$IdRoles);
+    $dao->modificar($a);
+    echo "Se actualizo correctamente...";
+}
+           
+?> 
 </body>
 </html>

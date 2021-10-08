@@ -40,8 +40,8 @@
 			<td><?php echo  $key->getContrasenaUsuarios() ?></td>
 			<td><?php echo  $key->getIdRoles() ?></td>      
 			<td>		
-			<a href="eliminarusuarios.php?IdUsuarios=<?php echo $key->getIdUsuarios();?>"><input type="submit" value="Eliminar" name="delete"></a>
-				<a href="actualizarusuarios.php?IdUsuarios=<?php echo $key->getIdUsuarios();?>"><input type="submit" value="Actualizar" name="update"></a>
+			<a href="../controlador/controladoreliminar.php?IdUsuarios=<?php echo $key->getIdUsuarios();?>"><input type="submit" value="Eliminar" ></a>
+			<a href="actualizarusuarios.php?IdUsuarios=<?php echo $key->getIdUsuarios();?>"><input type="submit" value="Actualizar" name="update"></a>
 			</td>
 			</tr>
 			<?php
@@ -51,7 +51,7 @@
 			
     </table>
 
-
+	<a href="inicio.php"><input type="button" value="Inicio Portafolio" class="boton2"></a>
 </div>
 </body>
 </html>

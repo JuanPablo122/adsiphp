@@ -1,0 +1,25 @@
+INICIO DE SESION PARA CLIENTES
+Correo: hedabehi@gmail.com
+Contraseña: 12345
+
+INICIO DE SESION PARA COCINERO 
+Correo: jhon@gmail.com
+Contraseña: 12345
+
+INICIO DE SESION PARA DOMICILIARIO
+Correo: juanp@gmail.com
+Contraseña: 12345
+
+INICIO DE SESION PARA ADMINISTRADORES
+(Solo existen 3 administradores los cuales son los desarrolladores 
+del sistema de información y el registro se hace manualmente.)
+Correo1:admin@deliciaexpress.com
+Contraseña1:admin
+Correo2:admin1@deliciaexpress.com
+Contraseña2:admin1
+Correo3:admin2@deliciaexpress.com
+Contraseña3:admin2
+
+INICIO DE SESION PARA RESTAURANTES
+Correo:karen@gmail.com
+Contraseña:12345

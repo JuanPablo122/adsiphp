@@ -1,12 +1,21 @@
-<?php
-require '../conexion/conexion2.php';
-$db =new Database();
-$con = $db->conectar();
+<?php 
+$consulta= consultarPersona($_GET['IdUsuarios']);
 
-$id=$_GET['IdUsuarios'];
-$query = $con->prepare("SELECT * FROM usuarios WHERE IdUsuarios = :IdUsuarios");
-$query->execute(['IdUsuarios' => $id]);
-$row = $query->fetch(PDO::FETCH_ASSOC);
+function consultarPersona($id){
+    include '../conexion/conexion2.php';
+    $sentencia="SELECT * FROM usuarios WHERE IdUsuarios='".$id."'";
+    $resultado=$conexion->query($sentencia) or die ("Error de conexion".mysqli_error($conexion));
+    $fila=$resultado->fetch_assoc();
+return[
+    $fila['IdUsuarios'],
+    $fila['NombreUsuarios'],
+    $fila['ApellidoUsuarios'],
+    $fila['EmailUsuarios'],
+    $fila['ContrasenaUsuarios'],
+    $fila['IdRoles']
+];
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -25,20 +34,20 @@ $row = $query->fetch(PDO::FETCH_ASSOC);
 <header>
 	<h1 id="tit">ACTUALIZAR CLIENTE</h1>
 </header>
-<form method="get" action="../controlador/controladoractualizar.php">
+<form method="GET" action="../controlador/controladoractualizar.php">
 	<p>Hola! Nos complace saber que deseas registrarte y empezar a usar nuestros servicios, a continuacion encontraras un formulario, diligencialo correctamente y asi podras empezar a disfrutar.</p>
-	<input type="hidden" class="ctexto" id="nombre" name="idUser" value="<?php echo  $row['IdUsuarios']; ?>"><br><br>
+	<input type="hidden" class="ctexto" id="nombre" name="IdUsuarios" value="<?php echo $consulta[0]?>"><br><br>
 	<label>Nombres completos</label>
-	<input type="text" class="ctexto" id="nombre" name="nombres" value="<?php echo  $row['NombreUsuarios']; ?>"><br><br>
+	<input type="text" class="ctexto" id="nombre" name="nombres" value="<?php echo $consulta[1]?>"><br><br>
 	<label>Apellidos completos</label>
-	<input type="text" class="ctexto" id="apellido" name="apellidos" value="<?php echo  $row['ApellidoUsuarios']; ?>"><br><br>
+	<input type="text" class="ctexto" id="apellido" name="apellidos" value="<?php echo $consulta[2]?>"><br><br>
 	<label>Correo Electronico</label>
-	<input type="email" class="ctexto" id="correo" name="email" value="<?php echo  $row['EmailUsuarios']; ?>"><br><br>	
+	<input type="email" class="ctexto" id="correo" name="email" value="<?php echo $consulta[3]?>"><br><br>	
 	<label>Crea tu contraseña</label>
-	<input type="password" class="ctexto" id="contraseña" name="contrasena" value="<?php echo  $row['ContrasenaUsuarios']; ?>"><br><br>
+	<input type="password" class="ctexto" id="contraseña" name="contrasena" value="<?php echo $consulta[4]?>"><br><br>
 	<label>IdRoles</label>
-	<input type="text" class="ctexto" id="nombre" name="idRol" value="<?php echo  $row['IdRoles']; ?>" ><br><br>
-	<input class="b1" type="submit" id="m"  value="Actualizar">
+	<input type="text" class="ctexto" id="nombre" name="idRol" value="<?php echo $consulta[5]?>" ><br><br>
+	<input class="b1" type="submit" id="m"  name="update" value="Actualizar">
 	<!--<a href="../vista/iniciosesion.php">Ya te registraste? <u>INICIA SESIÓN</u> </a>-->
 </form>
 	<a id="v" href="listarusuarios.php"><button class="b1"> VOLVER AL LISTADO</button></a>

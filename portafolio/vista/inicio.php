@@ -24,8 +24,9 @@
 	<div class="cont-menu">
 		<nav>
 			<a href="inicio.php">Inicio</a>
-			<a href="#">Contenedores</a>
-			<a href="#">Crud</a>
+			<a href="listarusuarios.php">CRUD</a>
+			<a href="manual.php">Manual de aplicación</a>
+            <a href="#">JavaScript</a>
 		</nav>
 		<label for="btn-menu">✖️</label>
 	</div>
@@ -50,7 +51,7 @@
 
 <div class="cuerpo-m">
     <p>Imágenes de Delicia Express</p>
-    <a href="##"><button>Ver página</button></a>
+    <a href="../deliciaExpress/vista/inicio.php"><button>Ver página</button></a>
 </div>
 
 <p class="parrafo" >Diseñamos experiencias inspiradas en <br> personas que generan 

@@ -27,28 +27,26 @@ class DaoUsuariosImpl extends Conexion implements daoUsuarios{
                
         
     }    
-    public function modificar(Usuarios $a){ 
-        $IdUsuarios=$a->getIdUsuarios();       
-        $NombreUsuarios=$a->getNombreUsuarios();
-        $ApellidoUsuarios=$a->getApellidoUsuarios();
-        $EmailUsuarios=$a->getEmailUsuarios();
-        $ContrasenaUsuarios=$a->getContrasenaUsuarios();
-        $IdRoles=$a->getIdRoles();
-        $stmt=$this->getCnx()->prepare("UPDATE usuarios " +
-        "SET IdUsuarios =$IdUsuarios"+
-        "NombreUsuarios =$NombreUsuarios," +
-        "ApellidoUsuarios =$ApellidoUsuarios," +
-       "EmailUsuarios = $EmailUsuarios" +
-       "ContrasenaUsuarios =$ContrasenaUsuarios"+
-       "IdRoles =$IdRoles"+
-        "where IdUsuarios =$IdUsuarios");
-        $stmt->execute();        
-    }
+    ////funcion modificar
+public function modificar(Usuarios $a){  
+    $IdUsuarios=$a->getIdUsuarios();      
+    $NombreUsuarios=$a->getNombreUsuarios();
+    $ApellidoUsuarios=$a->getApellidoUsuarios();
+    $EmailUsuarios=$a->getEmailUsuarios();
+    $ContrasenaUsuarios=$a->getContrasenaUsuarios();
+    $IdRoles=$a->getIdRoles();
+    $sql="UPDATE usuarios
+    SET NombreUsuarios ='$NombreUsuarios', ApellidoUsuarios ='$ApellidoUsuarios', EmailUsuarios = '$EmailUsuarios', ContrasenaUsuarios = '$ContrasenaUsuarios', IdRoles = '$IdRoles'
+    WHERE IdUsuarios ='$IdUsuarios'";
+    $stmt=$this->getCnx()->prepare($sql);
+    $stmt->execute();
+}
 
-    public function eliminar(Usuarios $a){        
-        $IdUsuarios=$a->getIdUsuarios();
-        $stmt=$this->getCnx()->prepare("DELETE FROM usuarios WHERE IdUsuarios=$IdUsuarios");
-        $stmt->execute();        
+    public function eliminar($a){        
+        $id=$_GET['IdUsuarios'];
+        $stmt=$this->getCnx()->prepare("DELETE FROM usuarios where IdUsuarios=$id");
+        $stmt->execute(); 
+
     }
 //public function listar();
 public function listar(){
