@@ -26,7 +26,7 @@
 			<a href="inicio.php">Inicio</a>
 			<a href="listarusuarios.php">CRUD</a>
 			<a href="manual.php">Manual de aplicación</a>
-            <a href="#">JavaScript</a>
+            <a href="javascript.php">JavaScript</a>
 		</nav>
 		<label for="btn-menu">✖️</label>
 	</div>

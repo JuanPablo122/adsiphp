@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+/*Portada*/
+header{
+    width: 100%;
+    height: 600px;
+    background: #c31432;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(275, 66%, 13%, 0.657), hsla(350, 81%, 42%, 0.657)),url(../imagenes/portada.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(275, 66%, 13%, 0.657), hsla(350, 81%, 42%, 0.657)),url(../imagenes/portada.jpg);
+     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+    
+}
+nav{
+    text-align: right;
+    padding: 30px 50px 0 0;
+}
+nav > a{
+    color: #fff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+}
+nav > a:hover{
+    text-decoration: underline;
+}
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.textos-header h1{
+    font-size: 50px;
+    color: #fff;
+}
+.wave{
+    position: absolute;
+    margin-bottom: 0;
+    width: 100%;
+}
+/*---------------Contenido-------------*/
+main > h2{
+    margin-top: 10%;
+    text-align: center;
+}
+.js1{
+    margin-top: 5%;
+    margin-left: 1%;
+    width: 50%;
+    height: 60%;
+    background-color: antiquewhite;
+    padding: 30px;
+}
+.js2{
+    margin-top: -40%;
+    float: right;
+
+}
