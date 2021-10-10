@@ -1,0 +1,31 @@
+ACCESO A VISTA DE PORTAFOLIO
+1.Para ingresar a la vista principal del portafolio deberá clonar 
+el repositorio de github directamente en la carpeta de htdocs de xampp.
+Luego deberá escribir la siguiente direccion en el navegador
+(http://localhost/adsiphp/portafolio/vista/inicio.php).
+
+2.Para que la direccion url funcione debe tener activado el servidor apache
+que viene implementado en xampp junto con el modulo mysql.
+
+FUNCIÓN CORRECTA DEL CRUD
+1.Ingresar a la base de datos de mysql posicionandose en el aplicativo de 
+xampp y dando clic en el boton de "Admin", el cual abrira una ventana con la base
+de datos.
+
+2.Crear una base de datos posicionandose en la parte superior izquierda
+y dando clic en la opcion "Nueva" donde en la parte derecha le abrira una pestaña
+con el titulo "Base de datos" y en el renglon siguiente apareceran las opciones de 
+"crear base de datos", luego en el recuadro que aparece en el renglon siguiente deberá 
+llamar la base de datos con el siguiente nombre ("deliciaexpress"), despues dará en el 
+boton "crear", y ya tendrá una base de datos donde deberá posicionarse en la misma
+y dirigirse a las opciones de la parte superior para dar en la pestaña "importar". 
+
+3. Luego en la sección "Archivo a importar" dará en el botón "Seleccionar archivo". Luego
+seleccionar la base de datos que estará ubicada en el repositorio en la carpeta "portafolio"
+y dentro de la carpeta "BaseDatosSQL" el archivo .sql llamado "deliciaexpress.sql".
+
+4.Dar en el botón "Continuar", y ya estará la base de datos importada y lista para su uso.
+
+INTERFAZ DE USUARIO
+1.Para obtener una experiencia mas agradable dentro del entorno del portafolio colocar
+la ventana del navegador de preferencia en un tamaño aproximado de 1280x1024.
