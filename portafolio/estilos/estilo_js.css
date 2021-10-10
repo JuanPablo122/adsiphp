@@ -56,14 +56,42 @@ main > h2{
 }
 .js1{
     margin-top: 5%;
-    margin-left: 1%;
+    margin-left: 2%;
     width: 50%;
     height: 60%;
-    background-color: antiquewhite;
+    background-color:lightslategray;
     padding: 30px;
+    margin-bottom: 5%;
+    color: #fff;
+    border-radius: 25px;
 }
 .js2{
-    margin-top: -40%;
+    margin-top: -52%;
+    margin-right: 2%;
     float: right;
+    background-color:lightslategray;
+    padding: 30px;
+    color: #fff;
+    border-radius: 25px;
 
+} 
+
+.js3{
+    margin-top: -30%;
+    float: right;
+    background-color:lightslategray;
+    padding: 30px;
+    margin-right: 21%;
+    color: #fff;
+    border-radius: 25px;
+
+}
+.js4{
+    margin-top: -90%;
+    float: right;
+    background-color:lightslategray;
+    padding: 30px;
+    margin-right: 14%;
+    color: #fff;
+    border-radius: 25px;
 }

@@ -10,10 +10,31 @@
 	<meta name="viewport" content="width-device-width, initial-scale-1.0">
 </head>
 <body>
-<header>
-</header>
-<a href="registrousuarios.php"><input type="button" value="Registrar" class="boton1"></a>	
-<div>
+<header class="header">        
+        <div class="container">
+            <div class="btn-menu">
+                <label for="btn-menu">☰</label>
+            </div>
+            <div class="texto">
+                <h2>Menú</h2>
+            </div>
+        </div>
+    </header>            
+    
+<input type="checkbox" id="btn-menu">
+<div class="container-menu">
+	<div class="cont-menu">
+		<nav>
+			<a href="inicio.php">Inicio</a>
+			<a href="listarusuarios.php">CRUD</a>
+			<a href="manual.php">Manual de aplicación</a>
+            <a href="javascript.php">JavaScript</a>
+		</nav>
+		<label for="btn-menu">✖️</label>
+	</div>
+</div>
+	
+<div class="Main">
 <h1 id="subt" align="center">Listado de usuarios</h1>
 <table class="table">
             <thead>
@@ -51,7 +72,7 @@
 			
     </table>
 
-	<a href="inicio.php"><input type="button" value="Inicio Portafolio" class="boton2"></a>
+	<a href="registrousuarios.php"><input type="button" value="Registrar" class="boton1"></a>
 </div>
 </body>
 </html>
