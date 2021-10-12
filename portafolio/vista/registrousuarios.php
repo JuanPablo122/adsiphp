@@ -15,11 +15,9 @@
 <header>
 	<h1 id="tit">REGISTRO CLIENTE</h1>
 </header>
-
 <form method="GET" action="../controlador/controladorregistro.php"> 
 	<p>Hola! Nos complace saber que deseas registrarte y empezar a usar nuestros servicios, a continuacion encontraras un formulario, diligencialo correctamente y asi podras empezar a disfrutar.</p>
-	<label>Id Usuarios</label>
-	<input type="text" class="ctexto" id="nombre" name="idUser" ><br><br>
+	<input type="hidden" class="ctexto" id="nombre" name="idUser" ><br><br>
 	<label>Nombres completos</label>
 	<input type="text" class="ctexto" id="nombre" name="nombres" ><br><br>
 	<label>Apellidos completos</label>
@@ -33,13 +31,7 @@
 	<input class="b1" type="submit" id="m" name="register">
 	<!--<a href="../vista/iniciosesion.php">Ya te registraste? <u>INICIA SESIÓN</u> </a>-->
 </form>
-	<a id="v" href="listarusuarios.php"><button class="b1"> VOLVER AL LISTADO</button></a>
-	
-<footer>
-	Contactanos <br>
-	Numeros: 3182883910-3002608446-3229564274 <br>
-	Direccion: Carrera 9 Este N 30C-36 San Mateo
-</footer>
+	<a id="v" href="../vista/listarusuarios.php"><button class="b1"> VOLVER AL LISTADO</button></a>
 
 </body>
 </html>

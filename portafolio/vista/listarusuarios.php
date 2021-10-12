@@ -8,6 +8,7 @@
 	<meta name="description" content="Esta pagina trata de una aplicacion interactiva que permite al usuario crear su propio plato, el cliente arrastra los ingredientes y se va formando su plato">
 	<meta name="author" content="Juan Pablo Doncel">
 	<meta name="viewport" content="width-device-width, initial-scale-1.0">
+    
 </head>
 <body>
 <header class="header">        
@@ -25,10 +26,10 @@
 <div class="container-menu">
 	<div class="cont-menu">
 		<nav>
-			<a href="inicio.php">Inicio</a>
-			<a href="listarusuarios.php">CRUD</a>
-			<a href="manual.php">Manual de aplicación</a>
-            <a href="javascript.php">JavaScript</a>
+			<a href="../vista/inicio.php">Inicio</a>
+			<a href="../vista/listarusuarios.php">CRUD</a>
+			<a href="../vista/manual.php">Manual de aplicación</a>
+            <a href="../vista/javascript.php">JavaScript</a>
 		</nav>
 		<label for="btn-menu">✖️</label>
 	</div>
@@ -36,6 +37,7 @@
 	
 <div class="Main">
 <h1 id="subt" align="center">Listado de usuarios</h1>
+<a href="../vista/listarusuarios.php"><input type="button" value="Recargar tabla" class="boton1"></a>
 <table class="table">
             <thead>
                 <tr>
@@ -72,7 +74,7 @@
 			
     </table>
 
-	<a href="registrousuarios.php"><input type="button" value="Registrar" class="boton1"></a>
+	<a href="../vista/registrousuarios.php"><input type="button" value="Registrar" class="boton2"></a>
 </div>
 </body>
 </html>

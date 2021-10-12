@@ -108,15 +108,15 @@ body{
 }
 .Main{
 	background-color:rgb(143,146,132);
-	height: 65%;
+	height: 80%;
 	margin-top: 10%;
 	padding-top: 50px;
 }
-table{
+.table{
 	border:2px none solid;
 	text-align: center;
 	margin-top: 50px;
-	margin-left: 175px;
+	margin-left: 7%;
 
 }
 #tr1{
@@ -131,10 +131,22 @@ th{
 	color: #fff;
 }
 .boton1{
-	margin-top: 10%;
+	margin-top: 1%;
 	margin-left: 1000px;
 	font-family: 'Kalam', cursive;
 	font-size: 16px;
 	width: 150px;
     height: 50px;
+}
+.boton2{
+    margin-top: 4%;
+	margin-left: 1000px;
+	font-family: 'Kalam', cursive;
+	font-size: 16px;
+	width: 150px;
+    height: 50px;
+}
+.mensaje{
+    color:deeppink;
+
 }

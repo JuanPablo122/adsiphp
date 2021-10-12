@@ -50,9 +50,8 @@ return[
 	<input class="b1" type="submit" id="m"  name="update" value="Actualizar">
 	<!--<a href="../vista/iniciosesion.php">Ya te registraste? <u>INICIA SESIÓN</u> </a>-->
 </form>
-	<a id="v" href="listarusuarios.php"><button class="b1"> VOLVER AL LISTADO</button></a>
-<footer>
-</footer>
+	<a id="v" href="../vista/listarusuarios.php"><button class="b1"> VOLVER AL LISTADO</button></a>
+
 
 </body>
 </html>
